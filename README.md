@@ -2,7 +2,7 @@
 
 ## test 1
 
-in here we have a `UserName` component which we can change the username from outside it's component
+in here we have a `UserName` component which we can change the username from outside it's component, as you will see in this example, I want to call a function inside child compoent from parent component and change some state in child component from parent component, so I have to use `useRef` to handle this functionaliy.
 
 
 

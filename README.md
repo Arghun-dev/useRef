@@ -1,5 +1,17 @@
 # useRef
 
+**`useRef` is an amazing feature which gives you access you in parent component all the `states` and `methods` of `child` component no mather in which level.**
+
+in this project I am calling a function and changin state of a `child` component from a `parent` component using `ref`
+
+## test 1
+
+in here we have a `UserName` component which we can change the username from outside it's component, as you will see in this example, I want to call a function inside child compoent from parent component and change some state in child component from parent component, so I have to use `useRef` to handle this functionaliy.
+
+
+
+ ## test 2
+ 
 ```js
 import React, { useState, useEffect, useRef } from 'react';
 

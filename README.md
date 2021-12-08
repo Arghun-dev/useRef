@@ -59,3 +59,29 @@ but if you write
 ```js
 numRef.current = 5; // it would work correctly
 ```
+
+
+## Another useful example of `useRef` (Question)
+
+What will be rendered in the browser and what will be logged in the console, and why?
+
+```js
+const App = () => {
+  const ref = React.useRef(0);
+  
+  React.useEffect(() => {
+    setInterval(() => {
+      console.log(ref.current);
+      ref.current = ref.current + 1;
+    }, 1000)
+  }, []);
+  
+  return <span>ref: {ref.current}</span>
+}
+```
+
+
+**Answer: ** => `'ref' will be incrementing in console.log() only, browser will always say 0`
+
+**Why? ** => `because changing ref does not make a re-render in the component just changing the current value of the ref object`
+
